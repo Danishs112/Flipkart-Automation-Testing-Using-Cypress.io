@@ -1,9 +1,9 @@
-const url = 'https://google.com'
+const url = 'https://google.com/'
 const search_box = '[name="q"]'
 
 class googlePage {
   static visit() {
-    cy.visit(url);
+    cy.visit("https://www.google.com/");
   }
 
   static titleMacth(title) {
