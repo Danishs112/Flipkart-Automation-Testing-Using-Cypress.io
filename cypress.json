@@ -3,6 +3,10 @@
     "ignoreTestFiles": ["*.js", "*.md"],
     "chromeWebSecurity": false,
     "testFiles": "**/*.feature",
+    "viewportHeight": 900,
+    "viewportWidth": 1440,
+    "browser": "chrome",
+    "defaultCommandTimeout": 30000,
     "env": {
         "TAGS": "not @ignore"
     }

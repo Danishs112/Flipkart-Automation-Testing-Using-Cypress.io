@@ -1,0 +1,55 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Flipkart Login Functionality",
+    "line": 1,
+    "id": "flipkart-login-functionality",
+    "tags": [],
+    "uri": "Login.feature",
+    "elements": [
+      {
+        "id": "flipkart-login-functionality;flipkart---checking-the-login-functionality-of-the-flipkart-application",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Flipkart - checking the login functionality of the flipkart application",
+        "tags": [
+          {
+            "name": "@google",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I am on the home page",
+            "result": {
+              "status": "undefined",
+              "duration": 79000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I see \"Google\" in the title",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I Search \"saravanan seenivasan\"",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
