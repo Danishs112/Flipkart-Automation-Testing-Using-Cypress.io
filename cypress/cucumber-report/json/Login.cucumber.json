@@ -1,23 +1,18 @@
 [
   {
     "keyword": "Feature",
-    "name": "Flipkart Login Functionality",
+    "name": "Flipkart Login Functionality Testing",
     "line": 1,
-    "id": "flipkart-login-functionality",
+    "id": "flipkart-login-functionality-testing",
     "tags": [],
     "uri": "Login.feature",
     "elements": [
       {
-        "id": "flipkart-login-functionality;flipkart---checking-the-login-functionality-of-the-flipkart-application",
+        "id": "flipkart-login-functionality-testing;flipkart---checking-the-login-functionality-of-the-flipkart-application",
         "keyword": "Scenario",
         "line": 4,
         "name": "Flipkart - checking the login functionality of the flipkart application",
-        "tags": [
-          {
-            "name": "@google",
-            "line": 3
-          }
-        ],
+        "tags": [],
         "type": "scenario",
         "steps": [
           {
@@ -26,8 +21,8 @@
             "line": 5,
             "name": "I am on the home page",
             "result": {
-              "status": "undefined",
-              "duration": 79000000
+              "status": "passed",
+              "duration": 2087000000
             }
           },
           {
@@ -36,7 +31,8 @@
             "line": 6,
             "name": "I see \"Google\" in the title",
             "result": {
-              "status": "skipped"
+              "status": "undefined",
+              "duration": 17000000
             }
           },
           {

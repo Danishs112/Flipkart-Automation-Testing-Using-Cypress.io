@@ -1,6 +1,6 @@
-Feature: Flipkart Login Functionality
+Feature: Flipkart Login Functionality Testing
 
-    @google
+
     Scenario: Flipkart - checking the login functionality of the flipkart application
         Given I am on the home page
         Then I see "Google" in the title
