@@ -10,7 +10,7 @@
     "test-tag-google": "./node_modules/.bin/cypress-tags run -e TAGS='not @actions and @google'",
     "test-tag-actions": "./node_modules/.bin/cypress-tags run -e TAGS='not @google and @actions'"
   },
-  "author": "saravanan",
+  "author": "Danish Soma",
   "license": "ISC",
   "devDependencies": {
     "cucumber-html-reporter": "^5.2.0",
