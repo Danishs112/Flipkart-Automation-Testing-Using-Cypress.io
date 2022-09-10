@@ -1,0 +1,10 @@
+{
+    "video": false,
+    "ignoreTestFiles": ["*.js", "*.md"],
+    "chromeWebSecurity": false,
+    "testFiles": "**/*.feature",
+    "env": {
+        "TAGS": "not @ignore"
+    }
+  }
+  

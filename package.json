@@ -1,0 +1,35 @@
+{
+  "name": "cypress-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open",
+    "test-search-feature": "cypress run --headed --browser chrome --spec 'cypress/integration/**/google.feature'",
+    "test-actions-feature": "cypress run --headed --browser chrome --spec 'cypress/integration/**/actions.feature'",
+    "test-tag-google": "./node_modules/.bin/cypress-tags run -e TAGS='not @actions and @google'",
+    "test-tag-actions": "./node_modules/.bin/cypress-tags run -e TAGS='not @google and @actions'"
+  },
+  "author": "saravanan",
+  "license": "ISC",
+  "devDependencies": {
+    "cucumber-html-reporter": "^5.2.0",
+    "cypress": "^4.7.0",
+    "cypress-cucumber-preprocessor": "^2.3.1",
+    "cypress-xpath": "^1.4.0",
+    "mocha": "^7.2.0",
+    "typescript": "^3.9.5"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "report",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "dependencies": {
+    "cucumber": "^6.0.5"
+  }
+}

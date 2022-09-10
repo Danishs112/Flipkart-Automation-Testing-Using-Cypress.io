@@ -1,0 +1,8 @@
+# Dependency directories
+node_modules/
+cypress/videos/tests
+npm-debug.log
+cypress/screenshots/tests
+cypress/cucumber-json
+report/
+screenshots/
