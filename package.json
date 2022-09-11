@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^12.2.0",
+    "base-64": "^1.0.0",
     "cucumber": "^6.0.5"
   }
 }

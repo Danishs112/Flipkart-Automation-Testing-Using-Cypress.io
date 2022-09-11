@@ -1,5 +1,7 @@
 {
   "url": "https://www.flipkart.com/",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "valid_email": "OTU5NjQ5MjQ0Nw==",
+  "valid_password": "ZGFuaXNoMTEy",
+  "invalid_email":"OTU5NjQ5MjQ0NDQ0",
+  "invalid_password":"aW52YWxpZFBhc3N3b3Jk"
 }
