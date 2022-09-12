@@ -5,7 +5,7 @@ const closeButton = "button._2KpZ6l._2doB4z";
 const emailInput = `${loginModal} input[type="text"]`;
 const passwordInput = `${loginModal} input[type="password"]`;
 const loginButtonOnModal = `${loginModal} button[type="submit"]`;
-const headingOnHeader = `${header} div.exehdJ`;
+const headingOnHeader = `${header} div.go_DOp`;
 const errorMessage ="span._2YULOR";
 const loginModalAfterCloseButton = "div._2Sn47c"
 
