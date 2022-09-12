@@ -3,18 +3,46 @@ import SearchPage from "../../../pages/search.page";
 
 
 And("I should see the search input field on the header",function(){
-    SearchPage.getSearchInputField().should("be.visible");
+    try{
+        SearchPage.getSearchInputField().should("be.visible");
+        cy.log('search input field is visible on the page');
+    }
+    catch(error){
+        cy.log('seach input field is not visible on the page'+ error);
+        throw(error);
+    }
 });
 
 
 When("I fill the {string} on the search input field",function(string){
-    SearchPage.getSearchInputField().type(string);
+    try{
+        SearchPage.getSearchInputField().type(string); 
+        cy.log(`fill the ${string} item on the search input field`);
+    }
+    catch(error){
+        cy.log(`not able to fill the ${string} item on the search input field` + error);
+        throw(error);
+    }
 });
 
 And("I click on the search icon on the search input field",function(){
-    SearchPage.getSearchIconOnInputField().click();
+    try{
+        SearchPage.getSearchIconOnInputField().click();
+        cy.log('clicked on the search icon on the search input field');
+    }
+    catch(error){
+        cy.log('not able to clicked on the search icon on the search input field'+error);
+        throw(error);
+    }
 });
 
 Then("I should navigated to the {string} page",function(string){
-    cy.url().should('include', string); 
+    try{
+        cy.url().should('include', string);
+        cy.log(`navigated to the ${string} page`); 
+    }
+    catch(error){
+        cy.log(`not navigated to the ${string} page` + error);
+        throw(error);
+    }
 });
