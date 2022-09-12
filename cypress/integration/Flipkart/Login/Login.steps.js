@@ -138,7 +138,7 @@ Then("I should see the {string} heading on the header", function (string) {
         cy.log(`${string} heading is visible on the header`);
     }
     catch(error){
-        cy.log(`${string} heading is not visible on the header`);
+        cy.log(`${string} heading is not visible on the header`+ error);
         throw(error);
     }
   
@@ -150,7 +150,7 @@ Then("I should see the {string} on the login modal", function (string) {
         cy.log(`${string} message is visible on the login modal`);
     }
     catch(error){
-        cy.log(`${string} message is not visible on the login modal`);
+        cy.log(`${string} message is not visible on the login modal`+ error);
         throw(error);
     }
 });
