@@ -35,14 +35,3 @@ And("I click on the search icon on the search input field",function(){
         throw(error);
     }
 });
-
-Then("I should navigated to the {string} page",function(string){
-    try{
-        cy.url().should('include', string);
-        cy.log(`navigated to the ${string} page`); 
-    }
-    catch(error){
-        cy.log(`not navigated to the ${string} page` + error);
-        throw(error);
-    }
-});
