@@ -6,9 +6,10 @@ Feature: Flipkart Add To Cart Functionality Testing
         When I search for the "<itemName>" item
         Then I should navigated to the "<itemName>" page
         And I should see all the items on the search page
-        When I click on the first item on the search page
-        Then I should navigated to the item page
-        And I should see the "ADD TO CART" button on the item page
+        When I click on the "1" item on the search page
+        Then I should navigated to the "<itemName>" page
+        # And I should see the "ADD TO CART" button on the item page
+        When I click on the "ADD TO CART" button on the item page
         Then I should navigated to the view cart page
         And I should see the item on the view cart page
 
