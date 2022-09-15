@@ -2,7 +2,7 @@ import { Given,When,Then,And } from "cypress-cucumber-preprocessor/steps";
 import cred from "../../fixtures/example.json";
 import LoginPage from "../../pages/login.page";
 import SearchPage from "../../pages/search.page";
-
+import Utility from "../../pages/utils";
 
 Given("I am on the home page",function(){
     cy.visit(cred.url);
@@ -48,4 +48,13 @@ Then("I should navigated to the {string} page",function(string){
         cy.log(`not navigated to the ${string} page` + error);
         throw(error);
     }
+});
+
+And("I log in on the home page",function(){
+    LoginPage.getLoginButtonOnHeader().contains("Login").click();
+    const email = Utility.getDecodedString("valid_email");
+    LoginPage.getEmailInputField().type(email);
+    const password = Utility.getDecodedString("valid_password");
+    LoginPage.getPasswordInputField().type(password);
+    LoginPage.getLoginButtonOnLoginModal().click();
 });
