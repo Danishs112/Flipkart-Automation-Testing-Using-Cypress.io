@@ -2,6 +2,7 @@ import { Given,When,Then,And } from "cypress-cucumber-preprocessor/steps";
 import cred from "../../fixtures/example.json";
 import LoginPage from "../../pages/login.page";
 import SearchPage from "../../pages/search.page";
+import AddToCart from "../../pages/addToCart.page";
 import Utility from "../../pages/utils";
 
 Given("I am on the home page",function(){
@@ -50,11 +51,38 @@ Then("I should navigated to the {string} page",function(string){
     }
 });
 
-And("I log in on the home page",function(){
+And("I log in with valid credentials",function(){
     LoginPage.getLoginButtonOnHeader().contains("Login").click();
     const email = Utility.getDecodedString("valid_email");
     LoginPage.getEmailInputField().type(email);
     const password = Utility.getDecodedString("valid_password");
     LoginPage.getPasswordInputField().type(password);
     LoginPage.getLoginButtonOnLoginModal().click();
+});
+
+When("I fill the {string} on the search input field",function(string){
+    cy.wait(4000);
+    try{
+        SearchPage.getSearchInputField().type(string); 
+        cy.log(`fill the ${string} item on the search input field`);
+    }
+    catch(error){
+        cy.log(`not able to fill the ${string} item on the search input field` + error);
+        throw(error);
+    }
+});
+
+And("I click on the search icon on the search input field",function(){
+    try{
+        SearchPage.getSearchIconOnInputField().click();
+        cy.log('clicked on the search icon on the search input field');
+    }
+    catch(error){
+        cy.log('not able to clicked on the search icon on the search input field'+error);
+        throw(error);
+    }
+});
+
+And("I should see all the items on the search page", function () {
+    AddToCart.getAllCards().should("be.visible");
 });

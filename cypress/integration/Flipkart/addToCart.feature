@@ -2,7 +2,7 @@ Feature: Flipkart Add To Cart Functionality Testing
 
     Scenario Outline: Flipkart Automation - checking functionality of the add to cart button 
         Given I am on the home page
-        And I log in on the home page
+        And I log in with valid credentials
         Then I should see the header on the page
         When I search for the "<itemName>" item
         Then I should navigated to the "<itemName>" page

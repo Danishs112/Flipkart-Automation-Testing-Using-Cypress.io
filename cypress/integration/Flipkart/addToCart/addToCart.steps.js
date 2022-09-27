@@ -1,10 +1,6 @@
 import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 import AddToCart from "../../../pages/addToCart.page";
 
-And("I should see all the items on the search page", function () {
-    AddToCart.getAllCards().should("be.visible");
-});
-
 When("I click on the {string} item on the search page", function (string) {
     AddToCart.getCard().eq(string).invoke("attr", "href").as("pageLink");
     AddToCart.getCard().eq(string).invoke('removeAttr', 'target').click();
